@@ -31,7 +31,8 @@
     "prettier": "3.3.3",
     "prettier-plugin-tailwindcss": "0.6.5",
     "tailwindcss": "3.4.5",
-    "typescript": "5.5.3"
+    "typescript": "5.5.3",
+    "vitest": "2.0.3"
   },
   "name": "reactsquad-production",
   "private": true,
@@ -40,8 +41,10 @@
     "dev": "next dev",
     "format": "prettier --write .",
     "lint": "npx eslint ./src",
+    "lint:fix": "npm run lint -- --fix",
     "prepare": "husky install",
     "start": "next start",
+    "test": "vitest --reporter=verbose",
     "type-check": "tsc -b"
   },
   "version": "0.1.0"
