@@ -5,10 +5,11 @@
     "react-dom": "18.3.1"
   },
   "devDependencies": {
+    "@eslint/compat": "1.1.1",
     "@types/node": "20.14.10",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
-    "eslint": "^8",
+    "eslint": "9.7.0",
     "eslint-config-next": "14.2.5",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.29.1",
@@ -28,7 +29,7 @@
     "build": "next build",
     "dev": "next dev",
     "format": "prettier --write .",
-    "lint": "next lint",
+    "lint": "npx eslint ./src",
     "start": "next start"
   },
   "version": "0.1.0"
