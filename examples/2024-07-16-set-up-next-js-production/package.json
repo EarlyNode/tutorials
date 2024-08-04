@@ -22,6 +22,7 @@
     "@commitlint/cli": "19.3.0",
     "@commitlint/config-conventional": "19.2.2",
     "@eslint/compat": "1.1.1",
+    "@playwright/test": "1.45.3",
     "@testing-library/dom": "10.3.2",
     "@testing-library/jest-dom": "6.4.6",
     "@testing-library/react": "16.0.0",
@@ -72,6 +73,8 @@
     "prisma:wipe": "npx prisma migrate reset --force && npx prisma db push",
     "start": "next start",
     "test": "vitest --reporter=verbose",
+    "test:e2e": "npx playwright test",
+    "test:e2e:ui": "npx playwright test --ui",
     "type-check": "tsc -b"
   },
   "version": "0.1.0"
