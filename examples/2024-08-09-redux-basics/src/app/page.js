@@ -1,6 +1,6 @@
 'use client';
 
-import { increment, selectCount } from './example';
+import { increment, selectCount } from './example-reducer';
 import { useAppDispatch, useAppSelector } from './hooks';
 import UserProfileContainer from './user-profile-container';
 

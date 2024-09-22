@@ -47,3 +47,11 @@ export const getCurrentUsersEmail = pipe(
 );
 
 export const selectIsLoggedIn = pipe(selectCurrentUserId, Boolean);
+
+export const selectCurrentUsersFullName = pipe(
+  selectCurrentUser,
+  converge(
+    (firstName, lastName) => `${firstName} ${lastName}`,
+    [propOr('', 'firstName'), propOr('', 'lastName')],
+  ),
+);
