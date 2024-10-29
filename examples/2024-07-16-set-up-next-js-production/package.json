@@ -11,10 +11,10 @@
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.1",
     "negotiator": "0.6.3",
-    "next": "14.2.5",
+    "next": "15.0.1",
     "prisma": "5.17.0",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "react": "19.0.0-rc-69d4b800-20241021",
+    "react-dom": "19.0.0-rc-69d4b800-20241021",
     "tailwind-merge": "2.4.0",
     "tailwindcss-animate": "1.0.7"
   },
@@ -29,14 +29,14 @@
     "@testing-library/user-event": "14.5.2",
     "@types/negotiator": "0.6.3",
     "@types/node": "20.14.10",
-    "@types/react": "18.3.3",
-    "@types/react-dom": "18.3.0",
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
     "@vitejs/plugin-react": "4.3.1",
     "commitizen": "4.3.0",
     "cz-conventional-changelog": "3.3.0",
     "dotenv": "16.4.5",
     "eslint": "9.7.0",
-    "eslint-config-next": "14.2.5",
+    "eslint-config-next": "15.0.1",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-playwright": "1.6.2",
@@ -58,7 +58,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "format": "prettier --write .",
     "lint": "npx eslint ./src",
     "lint:fix": "npm run lint -- --fix",
@@ -77,5 +77,9 @@
     "test:e2e:ui": "npx playwright test --ui",
     "type-check": "tsc -b"
   },
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "overrides": {
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
+  }
 }
